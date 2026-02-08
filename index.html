@@ -1,64 +1,151 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İşletme Adı - Hizmet Paneli</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MAST | 1860 Heritage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;500;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <style>
-        :root { --ana-renk: #2c3e50; --ikincil-renk: #e67e22; }
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .hero-section { background: var(--ana-renk); color: white; padding: 80px 0; border-bottom: 5px solid var(--ikincil-renk); }
-        .price-card { border: 2px solid #eee; transition: 0.3s; cursor: pointer; }
-        .price-card:hover { border-color: var(--ikincil-renk); transform: scale(1.05); }
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        :root {
+            --bg: #ffffff;
+            --text: #1d1d1f;
+            --accent: #bfa37e;
+            --dark: #1c1c1e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* 1860 HERITAGE HEADER */
+        .heritage-header {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 25px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        .heritage-header h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.8rem;
+            color: var(--accent);
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .heritage-header .year {
+            font-size: 5rem;
+            font-weight: 200;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+        .heritage-header p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            max-width: 300px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* PRODUCT LIST */
+        .container { padding: 40px 20px; max-width: 600px; margin: 0 auto; }
+
+        .item { margin-bottom: 80px; position: relative; }
+
+        .img-box {
+            width: 100%; height: 450px;
+            border-radius: 30px; overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        .info h2 { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
+        .info p { color: #6e6e73; font-size: 1.05rem; margin-bottom: 20px; }
+
+        /* SPECS */
+        .specs {
+            display: flex; gap: 15px; border-top: 1px solid #f2f2f7; padding-top: 20px;
+        }
+        .spec { display: flex; flex-direction: column; }
+        .spec span:first-child { font-size: 0.6rem; font-weight: 800; color: var(--accent); text-transform: uppercase; }
+        .spec span:last-child { font-size: 0.9rem; font-weight: 600; }
+
+        footer {
+            padding: 60px 20px; text-align: center; opacity: 0.3; font-size: 0.7rem;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 <body>
 
-<header class="hero-section text-center">
-    <div class="container">
-        <h1 class="display-4 fw-bold">İşletme Adı</h1>
-        <p class="lead">Profesyonel çözümler, uygun fiyatlar.</p>
-    </div>
-</header>
+    <section class="heritage-header">
+        <h4>Nossa História</h4>
+        <div class="year">1860</div>
+        <p>Sütün en saf haliyle başlayan bu yolculuk, asırlık tekniklerle bugün de MAST sofralarında yaşıyor.</p>
+    </section>
 
-<section class="container my-5">
-    <div class="row text-center">
-        <div class="col-md-4 mb-4">
-            <div class="card price-card h-100 p-3">
-                <h3>Standart Paket</h3>
-                <h2 class="text-primary">₺500</h2>
-                <p>Temel hizmet içeriği ve destek.</p>
-                <button class="btn btn-outline-dark">Detaylar</button>
+    <main class="container">
+        
+        <article class="item">
+            <div class="img-box"><img src="img/1.jpg" alt="Iogurte"></div>
+            <div class="info">
+                <h2>Iogurte</h2>
+                <p>Doğal sütün zanaatkar dokunuşuyla buluştuğu en saf form.</p>
+                <div class="specs">
+                    <div class="spec"><span>Kıvam</span><span>Pürüzsüz</span></div>
+                    <div class="spec"><span>Karakter</span><span>Geleneksel</span></div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card price-card h-100 p-3 shadow-sm">
-                <h3>Profesyonel</h3>
-                <h2 class="text-primary">₺1.200</h2>
-                <p>Tam kapsamlı hizmet ve öncelikli destek.</p>
-                <button class="btn btn-dark">Satın Al</button>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card price-card h-100 p-3">
-                <h3>Kurumsal</h3>
-                <h2 class="text-primary">₺2.500</h2>
-                <p>Özel çözümler ve 7/24 danışmanlık.</p>
-                <button class="btn btn-outline-dark">İletişime Geç</button>
-            </div>
-        </div>
-    </div>
-</section>
+        </article>
 
-<a href="https://wa.me/905XXXXXXXXX" class="whatsapp-float" target="_blank">
-    Bize WhatsApp'tan Ulaşın
-</a>
+        <article class="item">
+            <div class="img-box"><img src="img/2.jpg" alt="Filtrado"></div>
+            <div class="info">
+                <h2>Filtrado</h2>
+                <p>Keten süzgeçlerde 12 saat süren yavaş bir bekleyişin eseri.</p>
+                <div class="specs">
+                    <div class="spec"><span>Yöntem</span><span>Yavaş Süzme</span></div>
+                    <div class="spec"><span>Doku</span><span>Yoğun</span></div>
+                </div>
+            </div>
+        </article>
 
-<footer class="text-center py-4 text-muted">
-    <p>&copy; 2026 İşletme Adı | GitHub Pages ile Güçlendirilmiştir.</p>
-</footer>
+        <article class="item">
+            <div class="img-box"><img src="img/3.jpg" alt="Ayran"></div>
+            <div class="info">
+                <h2>Ayran</h2>
+                <p>Ferahlık veren mineral dengesiyle MAST kalitesinin sıvı hali.</p>
+                <div class="specs">
+                    <div class="spec"><span>Hissiyat</span><span>Ferahlatıcı</span></div>
+                    <div class="spec"><span>Denge</span><span>Mineralize</span></div>
+                </div>
+            </div>
+        </article>
+
+        <article class="item">
+            <div class="img-box"><img src="img/4.jpg" alt="Sütlaç"></div>
+            <div class="info">
+                <h2>Sütlaç</h2>
+                <p>1860'tan beri değişmeyen o efsanevi saray reçetesi.</p>
+                <div class="specs">
+                    <div class="spec"><span>Tat</span><span>Hafif & Şık</span></div>
+                    <div class="spec"><span>Miras</span><span>Asırlık</span></div>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        M . A . S . T &nbsp; P R E M I U M &nbsp; | &nbsp; 1 8 6 0
+    </footer>
 
 </body>
 </html>
